@@ -174,7 +174,7 @@ for ((i=0; i<retries; i++)); do
       fi
 done
 
-[[ $retries -eq i ]] && { echo "Adding ssh-key to GitHub failed! Try again later." }
+[[ $retries -eq i ]] && echo "Adding ssh-key to GitHub failed! Try again later."
 
 
 ##############################
@@ -222,7 +222,6 @@ brew install trash  # move to osx trash instead of rm
 
 ### Python
 brew install python
-brew install python3
 brew install pyenv
 
 
