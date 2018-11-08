@@ -131,7 +131,7 @@ echo "Important! For this step, use a github personal token with the admin:publi
 echo "If you don't have one, create it here: https://github.com/settings/tokens/new"
 
 retries=3
-SSH_KEY=`cat ~/.ssh/new_id_rsa.pub`
+SSH_KEY=`cat ~/.ssh/id_rsa.pub`
 
 for ((i=0; i<retries; i++)); do
       read -p 'GitHub username: ' ghusername
