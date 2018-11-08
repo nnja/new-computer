@@ -99,7 +99,7 @@ brew tap caskroom/cask
 echo "Generating ssh keys, adding to ssh-agent..."
 read -p 'Input email for ssh key: ' useremail
 
-echo "Enter ssh password:"
+echo "Use default ssh file location, enter a passphrase: "
 ssh-keygen -t rsa -b 4096 -C "$useremail"  # will prompt for password
 eval "$(ssh-agent -s)"
 
@@ -119,7 +119,7 @@ else
 		AddKeysToAgent yes
 		UseKeychain yes
 		IdentityFile ~/.ssh/id_rsa
-	EOT
+EOT
 fi
 
 #############################################
