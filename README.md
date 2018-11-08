@@ -206,7 +206,7 @@ brew install postgresql
 brew install redis
 
 
-### Command line tools
+### Command line tools - install new ones, update others to latest version
 brew install coreutils  # the ones that come with osx are out of date
 brew install git  # upgrade to latest
 brew install git-lfs # track large files in git https://github.com/git-lfs/git-lfs
@@ -216,8 +216,9 @@ brew install tmux
 brew install tree
 brew install curl  # get the latest version
 brew link curl --force
-brew install grep
+brew install grep --with-default-names
 brew install trash  # move to osx trash instead of rm
+brew install less
 
 
 ### Python
@@ -325,10 +326,25 @@ echo "Installing apps from the App Store..."
 
 ### find app ids with: mas search "app name"
 brew install mas
-mas install 907364780  # Tomato One - Pomodoro timer
-mas install 485812721  # Tweetdeck
-mas install 668208984  # GIPHY Capture. The GIF Maker (For recording my screen as gif)
-mas install 1351639930 # Gifski, convert videos to gifs
+
+### Mas login is currently broken on mojave. See:
+### Login manually for now.
+
+cecho "Need to log in to App Store manually to install apps with mas...." $red
+echo "Opening App Store. Please login."
+open "/Applications/App Store.app"
+echo "Is app store login complete.(y/n)? "
+read response
+if [ "$response" != "${response#[Yy]}" ]
+then
+	mas install 907364780  # Tomato One - Pomodoro timer
+	mas install 485812721  # Tweetdeck
+	mas install 668208984  # GIPHY Capture. The GIF Maker (For recording my screen as gif)
+	mas install 1351639930 # Gifski, convert videos to gifs
+	mas install 414030210  # Limechat, IRC app.
+else
+	cecho "App Store login not complete. Skipping installing App Store Apps" $red
+fi
 
 
 #############################################
