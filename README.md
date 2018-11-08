@@ -30,7 +30,7 @@ This command runs the following script:
 # \___/|___/_/\_\   |_|_| |_|___/\__\__,_|_|_|
 
 
-echo "I ❤️ 🍎"
+echo "I  ❤️  🍎"
 echo "Mac OS Install Setup Script"
 echo "By Nina Zakharenko"
 echo "Follow me on twitter! https://twitter.com/nnja"
@@ -104,7 +104,8 @@ echo "Installing brew..."
 
 if test ! $(which brew)
 then
-  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+	## Don't prompt for confirmation when installing homebrew
+  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" < /dev/null
 fi
 
 # Latest brew, install brew cask
@@ -329,10 +330,6 @@ mas install 907364780  # Tomato One - Pomodoro timer
 mas install 485812721  # Tweetdeck
 mas install 668208984  # GIPHY Capture. The GIF Maker (For recording my screen as gif)
 mas install 1351639930 # Gifski, convert videos to gifs
-
-# xcode
-mas install 497799835 # x-code
-xcode-select --install
 
 
 #############################################
