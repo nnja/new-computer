@@ -16,8 +16,8 @@ Some resources borrowed from:
 
 Open the terminal, then:
 
-```bash
-bash -c "`curl -L https://raw.githubusercontent.com/nnja/new-computer/master/setup.sh`"
+```sh
+bash -c "`curl -L https://git.io/new-computer`"
 ```
 
 This command runs the following script:
@@ -43,14 +43,14 @@ echo "Follow me on twitter! https://twitter.com/nnja"
 # Colorize
 
 # Set the colours you can use
-black='\033[0;30m'
-white='\033[0;37m'
-red='\033[0;31m'
-green='\033[0;32m'
-yellow='\033[0;33m'
-blue='\033[0;34m'
-magenta='\033[0;35m'
-cyan='\033[0;36m'
+black=$(tput setaf 0)
+red=$(tput setaf 1)
+green=$(tput setaf 2)
+yellow=$(tput setaf 3)
+blue=$(tput setaf 4)
+magenta =$(tput setaf 5)
+cyan=$(tput setaf 6)
+white=$(tput setaf 7)
 
 # Resets the style
 reset=`tput sgr0`
