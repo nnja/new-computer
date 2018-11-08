@@ -263,7 +263,6 @@ brew cask install quicklook-csv  # preview csvs
 
 ### Chat / Video Conference
 brew cask install slack
-brew cask install limechat # IRC client
 brew cask install microsoft-teams
 brew cask install zoomus
 brew cask install signal
