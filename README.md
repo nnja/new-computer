@@ -207,14 +207,12 @@ brew install redis
 
 
 ### Command line tools - install new ones, update others to latest version
-brew install coreutils  # the ones that come with osx are out of date
 brew install git  # upgrade to latest
 brew install git-lfs # track large files in git https://github.com/git-lfs/git-lfs
 brew install wget
 brew install zsh # zshell
 brew install tmux
 brew install tree
-brew install curl  # get the latest version
 brew link curl --force
 brew install grep --with-default-names
 brew install trash  # move to osx trash instead of rm
@@ -298,7 +296,6 @@ brew cask install vlc
 
 ### Run Brew Cleanup
 brew cleanup
-brew cask cleanup
 
 
 #############################################
@@ -394,9 +391,6 @@ defaults write com.apple.dock autohide -bool true
 
 # Only Show Open Applications In The Dock  
 defaults write com.apple.dock static-only -bool true
-
-# Disable the sound effects on boot
-sudo nvram SystemAudioVolume=” “
 
 # Display full POSIX path as Finder window title
 defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
