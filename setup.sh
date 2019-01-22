@@ -41,13 +41,13 @@ cecho() {
 }
 
 echo ""
-cecho "###############################################" $red
-cecho "#        DO NOT RUN THIS SCRIPT BLINDLY       #" $red
-cecho "#         YOU'LL PROBABLY REGRET IT...        #" $red
-cecho "#                                             #" $red
-cecho "#              READ IT THOROUGHLY             #" $red
-cecho "#         AND EDIT TO SUIT YOUR NEEDS         #" $red
-cecho "###############################################" $red
+echo "###############################################" $red
+echo "#        DO NOT RUN THIS SCRIPT BLINDLY       #" $red
+echo "#         YOU'LL PROBABLY REGRET IT...        #" $red
+echo "#                                             #" $red
+echo "#              READ IT THOROUGHLY             #" $red
+echo "#         AND EDIT TO SUIT YOUR NEEDS         #" $red
+echo "###############################################" $red
 echo ""
 
 # Set continue to false by default.
